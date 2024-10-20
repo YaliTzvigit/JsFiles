@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>  Fin du Jeu </title>
+</head>
+<body>
+
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="scorefinal"> 0 </h1>
+            <form class="finform">
+                <h2 id="textfinal">
+                    Entrez votre nom pour sauvegarder votre score > 
+                </h2>
+                <input type="text" name="name" id="username" placeholder="Entrez votre nom">
+                <button class="btn" id="svgScore" type="submit" onclick="saveHighScore(event)"
+                 disabled> Sauvegarder  </button>
+            </form>
+
+            <a href="C:\Users\HP\Documents\MikyJs\QUIZapp\gamefield.html" class="btn"> Rejouer </a>
+            <a href="C:\Users\HP\Documents\MikyJs\QUIZapp\index.html" class="btn" > Aller à l'accueil </a>
+        </div>
+    </div>
+    <script src="C:\Users\HP\Documents\MikyJs\QUIZapp\end.js"></script>
+</body>
+</html>

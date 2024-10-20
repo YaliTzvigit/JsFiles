@@ -1,0 +1,29 @@
+
+
+* {
+
+    margin: auto;
+    top: 0%;
+}
+
+
+table  {
+
+     border: 1px solid #000000;
+     font-size: 20px;
+     letter-spacing: 2%;
+     width: NONE;
+     margin-top: 50px;
+}
+
+tr 
+ {
+
+    border: 1px solid #778899;
+ }
+
+ td 
+   {
+
+      border: 1px solid #000000;
+   }

@@ -1,0 +1,50 @@
+
+
+
+Q1 : Quelle est la 4ème lettre de l'alphabet espagnol ? 
+
+  opt 1 > C
+  opt 2 > B
+  opt 3 > CH --> reponse correcte 
+  opt 4 > la D 
+
+
+Q2 :  Quelle est la moitié de 4 + 4 ?
+
+   opt 1 > 4
+   opt 2 > 2
+   opt 3 > 6 --> reponse correcte
+   opt 4 > 8
+
+
+Q3 : Le nombre d'employés à temps plein travaillant à GOOGLE ?
+
+    opt 1 > 36.000
+    opt 2 > 12.000
+    opt 3 > 72.000 --> reponse correcte 
+    opt 4 > 40.000
+
+
+Q4 : Le plus gros animal du monde ? 
+
+    opt 1 > La baleine bleue  --> reponse correcte
+    opt 2 > Le leviathan 
+    opt 3 > Le Ligre 
+    opt 4 > L'éléphant 
+
+
+Q5 : Quelle est la couleur du cheval blanc?
+
+   opt 1 > Bleue
+   opt 2 > Blanc
+   opt 3 > Rouge
+   opt 4 > Vert
+
+   --> reponse correcte
+
+Q6 :  La marque de voiture 'DS' appartient à quel concessionaire ?
+
+    opt 1 > Mercedes --> reponse correcte 
+    opt 2 > Citroen
+    opt 3 > Peugeot
+    opt 4 > Toyota 

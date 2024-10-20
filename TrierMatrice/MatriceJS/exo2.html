@@ -1,0 +1,72 @@
+
+
+ <!-- MATRICES -->
+
+
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tri des lignes d'une matrice</title>
+</head>
+<body>
+  <h2>Matrice avant tri :</h2>
+  <div id="matriceAvantTri"></div>
+  <h2>Matrice après tri :</h2>
+  <div id="matriceApresTri"></div>
+
+  <script>
+
+    // Fonction pour créer et trier la matrice
+
+    function trierMatrice() {
+      var lignes = parseInt(prompt("Entrez le nombre de lignes de la matrice :"));
+      var colonnes = parseInt(prompt("Entrez le nombre de colonnes de la matrice :"));
+      var matrice = [];
+
+      // Remplir la matrice avec les nombres saisis par l'utilisateur
+
+      for (var i = 0; i < lignes; i++) {
+        matrice[i] = [];
+        for (var j = 0; j < colonnes; j++) {
+          var nombre = parseInt(prompt("Saisissez le nombre pour la position [" + i + "][" + j + "] :"));
+          matrice[i][j] = nombre;
+        }
+      }
+
+      // Afficher la matrice avant le tri
+
+      afficherMatrice("matriceAvantTri", matrice);
+
+      // Trier chaque ligne de la matrice dans l'ordre croissant
+
+      for (var i = 0; i < lignes; i++) {
+        matrice[i].sort(function(a, b) { // sort > permet de trier
+          return a - b;
+        });
+      }
+
+      // Afficher la matrice après le tri
+      afficherMatrice("matriceApresTri", matrice);
+    }
+
+    // afficher la matrice sur la page :
+    
+    function afficherMatrice(elementId, matrice) {
+      var table = "<table border='1'>";
+      for (var i = 0; i < matrice.length; i++) {
+        table += "<tr>";
+        for (var j = 0; j < matrice[i].length; j++) {
+          table += "<td>" + matrice[i][j] + "</td>";
+        }
+        table += "</tr>";
+      }
+      table += "</table>";
+      document.getElementById(elementId).innerHTML = table;
+    }
+
+    // Appel de la fonction
+    trierMatrice();
+  </script>
+</body>
+</html>

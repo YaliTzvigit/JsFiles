@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de Texte</title>
+    <script>
+        function validateText() {
+            // Récupérer le texte de la zone de texte
+            let text = document.getElementById("textInput").value;
+            
+            // Séparer le texte en phrases basées sur les points
+            let sentences = text.split('.').filter(sentence => sentence.trim().length > 0);
+            
+            // Vérifier qu'il y a au moins deux phrases
+            if (sentences.length < 2) {
+                alert("Le texte doit contenir au moins deux phrases.");
+                return;
+            }
+            
+            let totalWords = 0;
+            let valid = true;
+            
+            // Vérifier chaque phrase
+            for (let sentence of sentences) {
+                // Séparer la phrase en mots
+                let words = sentence.trim().split(/\s+/);
+                
+                // Vérifier que chaque phrase contient au moins 4 mots
+                if (words.length < 4) {
+                    valid = false;
+                    break;
+                }
+                
+                // Vérifier que chaque mot contient au moins 4 caractères
+                for (let word of words) {
+                    if (word.length < 4) {
+                        valid = false;
+                        break;
+                    }
+                }
+                
+                if (!valid) {
+                    break;
+                }
+                
+                totalWords += words.length;
+            }
+            
+            if (valid) {
+                alert("Nombre de mots dans le texte : " + totalWords);
+            } else {
+                alert("Chaque phrase doit contenir au moins 4 mots et chaque mot doit contenir au moins 4 caractères.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Validation de Texte</h1>
+    <textarea id="textInput" rows="10" cols="50" placeholder="Saisissez votre texte ici..."></textarea><br>
+    <button onclick="validateText()">Valider le Texte</button>
+</body>
+</html>

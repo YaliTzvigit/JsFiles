@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Mise en Forme</title>
+    <style>
+        #contentBlock {
+            padding: 20px;
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Générateur de Mise en Forme</h2>
+    
+    <form id="formatForm">
+        <label for="content">Contenu :</label><br>
+        <textarea id="content" name="content" rows="4" cols="50" placeholder="Entrez votre texte ici..."></textarea><br><br>
+
+        <label for="alignment">Alignement du contenu :</label><br>
+        <select id="alignment" name="alignment">
+            <option value="left">Aligner à gauche</option>
+            <option value="center">Centrer</option>
+            <option value="right">Aligner à droite</option>
+            <option value="justify">Justifier</option>
+        </select><br><br>
+
+        <button type="button" onclick="applyFormatting()">Appliquer la Mise en Forme</button>
+    </form>
+
+    <div id="contentBlock">
+
+        <!-- Le contenu formaté apparaîtra ici -->
+
+    </div>
+
+    <script>
+        function applyFormatting() {
+
+            // Récupération des valeurs du formulaire
+
+            var content = document.getElementById('content').value;
+            var alignment = document.getElementById('alignment').value;
+
+            // Application des valeurs au bloc de contenu
+
+            var contentBlock = document.getElementById('contentBlock');
+            contentBlock.style.textAlign = alignment;
+            contentBlock.innerHTML = content;
+        }d
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>
